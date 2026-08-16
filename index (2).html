@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portal AgroConecta — Agro forte. Futuro sustentável.</title>
+<meta name="description" content="Projeto escolar Agrinho 2026 — tecnologia, educação e agricultura sustentável em uma experiência digital interativa.">
+
+<!-- Fontes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================
+     BOTÃO PULAR PARA CONTEÚDO (ACESSIBILIDADE)
+============================================ -->
+<a href="#main" class="skip-link">Pular para o conteúdo</a>
+
+<!-- ============================================
+     NAVBAR
+============================================ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#topo" class="brand">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="30" height="30">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2" opacity="0.35"/>
+          <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 8 L20 32 M8 20 L32 20" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+          <circle cx="20" cy="20" r="3.4" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="brand__text">Agro<strong>Conecta</strong></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="#topo" data-section="topo">Início</a>
+      <a href="#projeto" data-section="projeto">O projeto</a>
+      <a href="#sustentabilidade" data-section="sustentabilidade">Sustentabilidade</a>
+      <a href="#calculadora" data-section="calculadora">Calculadora</a>
+      <a href="#boas-praticas" data-section="boas-praticas">Boas práticas</a>
+      <a href="#quiz" data-section="quiz">Quiz</a>
+      <a href="#flashlab" data-section="flashlab">Flashcards</a>
+      <a href="#monitoramento" data-section="monitoramento">Monitoramento</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="btn-icon" id="a11yToggle" aria-expanded="false" aria-controls="a11yPanel" aria-label="Abrir painel de acessibilidade">
+        <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
+      </button>
+      <a href="#desafio-dia" class="btn btn--accent btn--sm">Desafio sustentável</a>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- PAINEL DE ACESSIBILIDADE -->
+  <div class="a11y-panel" id="a11yPanel" hidden>
+    <p class="a11y-panel__title">Preferências de leitura</p>
+    <div class="a11y-panel__row">
+      <span>Tamanho do texto</span>
+      <div class="a11y-panel__buttons">
+        <button id="fontDecrease" aria-label="Diminuir fonte">A-</button>
+        <button id="fontReset" aria-label="Redefinir fonte">A</button>
+        <button id="fontIncrease" aria-label="Aumentar fonte">A+</button>
+      </div>
+    </div>
+    <div class="a11y-panel__row">
+      <span>Alto contraste</span>
+      <button id="contrastToggle" class="switch" role="switch" aria-checked="false" aria-label="Ativar alto contraste">
+        <span class="switch__dot"></span>
+      </button>
+    </div>
+    <div class="a11y-panel__row">
+      <span>Reduzir animações</span>
+      <button id="motionToggle" class="switch" role="switch" aria-checked="false" aria-label="Reduzir animações">
+        <span class="switch__dot"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================
+     HERO
+============================================ -->
+<section class="hero" id="topo">
+  <div class="hero__grid">
+    <div class="hero__content reveal">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> Agrinho 2026 · projeto escolar</p>
+      <h1 class="hero__title">Agro forte.<br>Futuro sustentável.</h1>
+      <p class="hero__text">Tecnologia, conhecimento e atitudes que transformam a forma como produzimos hoje para proteger o amanhã.</p>
+      <div class="hero__actions">
+        <a href="#projeto" class="btn btn--primary">Explorar o projeto <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a href="#quiz" class="btn btn--ghost">Testar meu conhecimento</a>
+      </div>
+
+      <div class="hero__stats" aria-hidden="true">
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="72">0</span>
+          <span class="hero__stat-label">índice médio de sustentabilidade simulado</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="15">0</span>
+          <span class="hero__stat-label">boas práticas catalogadas</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="4">0</span>
+          <span class="hero__stat-label">pilares da sustentabilidade</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__visual reveal" aria-hidden="true">
+      <div class="scan-frame">
+        <!-- IMAGEM FORNECIDA: ÁGUA -->
+        <img id="imgHeroAgua" alt="" class="scan-frame__img" data-fallback="water">
+        <svg class="scan-frame__lines" viewBox="0 0 400 480" preserveAspectRatio="none">
+          <line x1="0" y1="120" x2="400" y2="120" class="scan-line"/>
+          <line x1="0" y1="330" x2="400" y2="330" class="scan-line"/>
+          <circle cx="70" cy="90" r="3" class="scan-node"/>
+          <circle cx="330" cy="150" r="3" class="scan-node scan-node--delay"/>
+          <circle cx="60" cy="360" r="3" class="scan-node"/>
+        </svg>
+        <div class="data-chip data-chip--1">
+          <span class="data-chip__label">Umidade do solo</span>
+          <span class="data-chip__value" id="chipUmidade">67%</span>
+        </div>
+        <div class="data-chip data-chip--2">
+          <span class="data-chip__label">Uso de água</span>
+          <span class="data-chip__value">-24%</span>
+        </div>
+        <div class="data-chip data-chip--3">
+          <span class="data-chip__label">Sensor ativo</span>
+          <span class="data-chip__value"><i class="fa-solid fa-circle blink" aria-hidden="true"></i> online</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="scroll-cue" id="scrollCue" aria-label="Rolar para o próximo conteúdo">
+    <span></span>
+  </button>
+</section>
+
+<!-- ============================================
+     SEÇÃO: O DESAFIO
+============================================ -->
+<section class="section" id="projeto">
+  <div class="container">
+    <p class="eyebrow">O desafio</p>
+    <h2 class="section__title">Produzir mais.<br>Preservar melhor.</h2>
+    <p class="section__lead">A agricultura do século XXI precisa responder, ao mesmo tempo, a duas perguntas que parecem opostas: como alimentar mais gente e como usar menos recursos naturais para isso. Quatro frentes concentram esse desafio.</p>
+
+    <div class="challenge-grid">
+      <article class="challenge-card">
+        <span class="challenge-card__icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></span>
+        <h3>Água</h3>
+        <p>Como produzir usando esse recurso de forma inteligente, sem desperdício e sem comprometer o abastecimento?</p>
+      </article>
+      <article class="challenge-card">
+        <span class="challenge-card__icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></span>
+        <h3>Solo</h3>
+        <p>Um solo saudável é parte essencial de uma produção sustentável — e leva anos para se recuperar quando é degradado.</p>
+      </article>
+      <article class="challenge-card">
+        <span class="challenge-card__icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span>
+        <h3>Energia</h3>
+        <p>Tecnologia também pode reduzir desperdícios: sensores e automação evitam gasto onde ele não é necessário.</p>
+      </article>
+      <article class="challenge-card">
+        <span class="challenge-card__icon"><i class="fa-solid fa-recycle" aria-hidden="true"></i></span>
+        <h3>Resíduos</h3>
+        <p>Reaproveitar também é produzir melhor — cada resíduo pode ser o início de outro ciclo produtivo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SEÇÃO: PILARES DA SUSTENTABILIDADE
+============================================ -->
+<section class="section section--tint" id="sustentabilidade">
+  <div class="container">
+    <div class="split">
+      <div>
+        <p class="eyebrow">O que é sustentabilidade?</p>
+        <h2 class="section__title">Quatro pilares, um só equilíbrio.</h2>
+        <p class="section__lead">Sustentabilidade não é uma ideia abstrata — é um conjunto de decisões práticas, tomadas todos os dias, em quatro frentes que se conectam. Toque em cada pilar para entender melhor.</p>
+      </div>
+      <div class="pillar-image">
+        <!-- IMAGEM FORNECIDA: PLANTA / SUSTENTABILIDADE -->
+        <img id="imgPilares" alt="" data-fallback="plant">
+      </div>
+    </div>
+
+    <div class="pillar-grid" id="pillarGrid">
+      <button class="pillar-card" data-pillar="agua">
+        <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+        <span>Água</span>
+      </button>
+      <button class="pillar-card" data-pillar="solo">
+        <i class="fa-solid fa-mound" aria-hidden="true"></i>
+        <span>Solo</span>
+      </button>
+      <button class="pillar-card" data-pillar="biodiversidade">
+        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+        <span>Biodiversidade</span>
+      </button>
+      <button class="pillar-card" data-pillar="tecnologia">
+        <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+        <span>Tecnologia</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL PILARES -->
+<div class="modal" id="pillarModal" hidden>
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="pillarModalTitle">
+    <button class="modal__close" data-close-modal aria-label="Fechar">✕</button>
+    <span class="modal__icon" id="pillarModalIcon"></span>
+    <h3 id="pillarModalTitle"></h3>
+    <p id="pillarModalText"></p>
+  </div>
+</div>
+
+<!-- ============================================
+     METODOLOGIA
+============================================ -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow">Como funciona o projeto</p>
+    <h2 class="section__title">Uma jornada em quatro etapas.</h2>
+
+    <div class="timeline">
+      <div class="timeline__step">
+        <span class="timeline__num">01</span>
+        <h3>Pesquisar</h3>
+        <p>Entender os desafios reais da agricultura local e da nossa região.</p>
+      </div>
+      <div class="timeline__step">
+        <span class="timeline__num">02</span>
+        <h3>Conectar</h3>
+        <p>Relacionar conhecimento científico, escola e comunidade rural.</p>
+      </div>
+      <div class="timeline__step">
+        <span class="timeline__num">03</span>
+        <h3>Experimentar</h3>
+        <p>Testar práticas sustentáveis e utilizar tecnologia acessível.</p>
+      </div>
+      <div class="timeline__step">
+        <span class="timeline__num">04</span>
+        <h3>Transformar</h3>
+        <p>Aplicar soluções no dia a dia e compartilhar conhecimento adiante.</p>
+      </div>
+    </div>
+
+    <div class="methodology-image">
+      <!-- IMAGEM FORNECIDA: HORTA ESCOLAR -->
+      <img id="imgHorta" alt="" data-fallback="garden">
+      <div class="methodology-image__caption">
+        <p>Educação e agricultura andam juntas: protagonismo estudantil é parte da metodologia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CALCULADORA DE PEGADA
+============================================ -->
+<section class="section section--dark" id="calculadora">
+  <div class="container">
+    <p class="eyebrow eyebrow--light">Ferramenta interativa</p>
+    <h2 class="section__title section__title--light">Quanto pesa a sua produção?</h2>
+    <p class="section__lead section__lead--light">Preencha dados aproximados de uma pequena propriedade e receba uma estimativa educativa do seu índice de sustentabilidade. Isso <strong>não é</strong> uma certificação ambiental nem um cálculo científico oficial.</p>
+
+    <div class="calc">
+      <form class="calc__form" id="calcForm">
+        <div class="calc__field">
+          <label for="areaProp">Área da propriedade (hectares)</label>
+          <input type="number" id="areaProp" min="0" step="0.1" value="2" required>
+        </div>
+        <div class="calc__field">
+          <label for="consumoAgua">Consumo aproximado de água (m³/mês)</label>
+          <input type="number" id="consumoAgua" min="0" step="1" value="40" required>
+        </div>
+        <div class="calc__field">
+          <label for="freqIrrigacao">Frequência de irrigação</label>
+          <select id="freqIrrigacao">
+            <option value="baixa">Baixa (1–2x por semana)</option>
+            <option value="media" selected>Média (3–5x por semana)</option>
+            <option value="alta">Alta (todos os dias)</option>
+          </select>
+        </div>
+        <div class="calc__field">
+          <label for="energiaEletrica">Uso de energia elétrica</label>
+          <select id="energiaEletrica">
+            <option value="baixo">Baixo</option>
+            <option value="medio" selected>Médio</option>
+            <option value="alto">Alto</option>
+          </select>
+        </div>
+        <div class="calc__field">
+          <label for="combustivel">Uso de combustíveis (máquinas)</label>
+          <select id="combustivel">
+            <option value="nenhum">Nenhum</option>
+            <option value="pouco" selected>Pouco</option>
+            <option value="muito">Muito</option>
+          </select>
+        </div>
+        <div class="calc__field">
+          <label for="residuos">Resíduos gerados (kg/semana aprox.)</label>
+          <input type="number" id="residuos" min="0" step="1" value="15" required>
+        </div>
+
+        <div class="calc__checks">
+          <label class="checkbox"><input type="checkbox" id="compostagem" checked><span>Faz compostagem</span></label>
+          <label class="checkbox"><input type="checkbox" id="reaproveitaAgua"><span>Reaproveita água</span></label>
+          <label class="checkbox"><input type="checkbox" id="energiaRenovavel"><span>Usa energia renovável</span></label>
+          <label class="checkbox"><input type="checkbox" id="conservacaoSolo" checked><span>Pratica conservação do solo</span></label>
+        </div>
+
+        <div class="calc__actions">
+          <button type="submit" class="btn btn--accent">Calcular impacto</button>
+          <button type="reset" class="btn btn--ghost btn--ghost-dark" id="calcReset">Limpar</button>
+        </div>
+        <p class="calc__error" id="calcError" role="alert" hidden></p>
+      </form>
+
+      <div class="calc__result" id="calcResult">
+        <div class="calc__empty" id="calcEmpty">
+          <i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+          <p>Preencha o formulário para ver seu índice estimado.</p>
+        </div>
+
+        <div class="calc__filled" id="calcFilled" hidden>
+          <div class="gauge" id="gauge">
+            <svg viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="86" class="gauge__track"/>
+              <circle cx="100" cy="100" r="86" class="gauge__fill" id="gaugeFill"/>
+            </svg>
+            <div class="gauge__center">
+              <span class="gauge__value" id="gaugeValue">0</span>
+              <span class="gauge__max">/100</span>
+            </div>
+          </div>
+          <p class="calc__classification" id="calcClass"></p>
+
+          <div class="calc__bars">
+            <div class="calc__bar-row">
+              <span>Água</span>
+              <div class="bar"><div class="bar__fill" id="barAgua"></div></div>
+              <strong id="barAguaVal">0%</strong>
+            </div>
+            <div class="calc__bar-row">
+              <span>Solo</span>
+              <div class="bar"><div class="bar__fill" id="barSolo"></div></div>
+              <strong id="barSoloVal">0%</strong>
+            </div>
+            <div class="calc__bar-row">
+              <span>Energia</span>
+              <div class="bar"><div class="bar__fill" id="barEnergia"></div></div>
+              <strong id="barEnergiaVal">0%</strong>
+            </div>
+            <div class="calc__bar-row">
+              <span>Resíduos</span>
+              <div class="bar"><div class="bar__fill" id="barResiduos"></div></div>
+              <strong id="barResiduosVal">0%</strong>
+            </div>
+          </div>
+
+          <div class="calc__recommendation" id="calcRecommendation"></div>
+          <p class="calc__disclaimer"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Estimativa educativa criada para este projeto escolar — não é uma certificação ambiental.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MURAL DE BOAS PRÁTICAS
+============================================ -->
+<section class="section" id="boas-praticas">
+  <div class="container">
+    <p class="eyebrow">Mural colaborativo</p>
+    <h2 class="section__title">Ideias que fazem a diferença.</h2>
+    <p class="section__lead">Práticas simples, testadas por produtores e escolas, que reduzem impacto ambiental sem abrir mão de produtividade.</p>
+
+    <div class="filters" id="filters" role="tablist" aria-label="Filtrar boas práticas por categoria">
+      <button class="filter active" data-filter="todos">Todos</button>
+      <button class="filter" data-filter="agua">Água</button>
+      <button class="filter" data-filter="solo">Solo</button>
+      <button class="filter" data-filter="energia">Energia</button>
+      <button class="filter" data-filter="residuos">Resíduos</button>
+      <button class="filter" data-filter="biodiversidade">Biodiversidade</button>
+      <button class="filter" data-filter="tecnologia">Tecnologia</button>
+    </div>
+
+    <div class="practices-grid" id="practicesGrid"></div>
+
+    <div class="practice-form-wrap">
+      <h3>Compartilhe uma boa prática</h3>
+      <form class="practice-form" id="practiceForm">
+        <div class="practice-form__row">
+          <label for="practiceName">Nome da prática</label>
+          <input type="text" id="practiceName" maxlength="60" required placeholder="Ex: Captação de água da chuva">
+        </div>
+        <div class="practice-form__row">
+          <label for="practiceCategory">Categoria</label>
+          <select id="practiceCategory" required>
+            <option value="agua">Água</option>
+            <option value="solo">Solo</option>
+            <option value="energia">Energia</option>
+            <option value="residuos">Resíduos</option>
+            <option value="biodiversidade">Biodiversidade</option>
+            <option value="tecnologia">Tecnologia</option>
+          </select>
+        </div>
+        <div class="practice-form__row practice-form__row--full">
+          <label for="practiceDesc">Descrição</label>
+          <textarea id="practiceDesc" maxlength="220" required placeholder="Explique brevemente como funciona..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Adicionar ao mural</button>
+        <p class="practice-form__feedback" id="practiceFeedback" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL PRÁTICA -->
+<div class="modal" id="practiceModal" hidden>
+  <div class="modal__backdrop" data-close-modal></div>
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="practiceModalTitle">
+    <button class="modal__close" data-close-modal aria-label="Fechar">✕</button>
+    <span class="modal__tag" id="practiceModalTag"></span>
+    <h3 id="practiceModalTitle"></h3>
+    <p id="practiceModalText"></p>
+  </div>
+</div>
+
+<!-- ============================================
+     ESPAÇO INTERCULTURAL
+============================================ -->
+<section class="section section--tint">
+  <div class="container">
+    <p class="eyebrow">Espaço para reflexão</p>
+    <h2 class="section__title">Conhecimento não é só tecnologia.</h2>
+    <p class="section__lead">Sustentabilidade também depende de conhecimento tradicional, experiência de quem vive do campo e troca entre gerações.</p>
+
+    <div class="reflection-grid">
+      <article class="reflection-card">
+        <h3>O que podemos aprender com quem vive do campo?</h3>
+        <p>Produtores rurais acumulam décadas de observação sobre clima, solo e ciclos naturais — um saber que complementa a ciência.</p>
+      </article>
+      <article class="reflection-card">
+        <h3>Tecnologia substitui conhecimento?</h3>
+        <p>Sensores e dados ajudam a decidir melhor, mas não substituem a experiência de quem observa a terra todos os dias.</p>
+      </article>
+      <article class="reflection-card">
+        <h3>Como diferentes gerações podem trabalhar juntas?</h3>
+        <p>Jovens trazem ferramentas novas; produtores experientes trazem contexto. Juntos, tomam decisões mais equilibradas.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DASHBOARD IoT
+============================================ -->
+<section class="section section--dark" id="monitoramento">
+  <div class="container">
+    <p class="eyebrow eyebrow--light">Monitoramento em tempo real</p>
+    <h2 class="section__title section__title--light">A horta está falando.</h2>
+    <p class="section__lead section__lead--light">Simulação de um painel de sensores para uma futura integração com Arduino/Raspberry Pi. <span class="tag-demo">Modo demonstração — dados simulados</span></p>
+
+    <div class="iot-grid">
+      <div class="iot-card" data-status="normal">
+        <span class="iot-card__icon"><i class="fa-solid fa-droplet-slash" aria-hidden="true"></i></span>
+        <span class="iot-card__label">Umidade do solo</span>
+        <span class="iot-card__value" id="iotSolo">67<small>%</small></span>
+        <span class="iot-card__status" id="iotSoloStatus">normal</span>
+      </div>
+      <div class="iot-card" data-status="normal">
+        <span class="iot-card__icon"><i class="fa-solid fa-temperature-half" aria-hidden="true"></i></span>
+        <span class="iot-card__label">Temperatura</span>
+        <span class="iot-card__value" id="iotTemp">24.8<small>°C</small></span>
+        <span class="iot-card__status" id="iotTempStatus">normal</span>
+      </div>
+      <div class="iot-card" data-status="normal">
+        <span class="iot-card__icon"><i class="fa-solid fa-wind" aria-hidden="true"></i></span>
+        <span class="iot-card__label">Umidade do ar</span>
+        <span class="iot-card__value" id="iotAr">71<small>%</small></span>
+        <span class="iot-card__status" id="iotArStatus">normal</span>
+      </div>
+      <div class="iot-card" data-status="normal">
+        <span class="iot-card__icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></span>
+        <span class="iot-card__label">Luminosidade</span>
+        <span class="iot-card__value" id="iotLux">823<small>lux</small></span>
+        <span class="iot-card__status" id="iotLuxStatus">normal</span>
+      </div>
+    </div>
+
+    <div class="iot-chart-wrap">
+      <div class="iot-chart-head">
+        <h3>Umidade do solo — últimos 30 registros</h3>
+        <span class="iot-chart-live"><i class="fa-solid fa-circle blink" aria-hidden="true"></i> ao vivo</span>
+      </div>
+      <canvas id="iotChart" width="900" height="220" role="img" aria-label="Gráfico de linha mostrando a variação simulada da umidade do solo ao longo do tempo"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     QUIZ
+============================================ -->
+<section class="section" id="quiz">
+  <div class="container">
+    <p class="eyebrow">Teste seus conhecimentos</p>
+    <h2 class="section__title">Você realmente entende de sustentabilidade?</h2>
+
+    <div class="quiz" id="quizApp">
+      <div class="quiz__start" id="quizStart">
+        <p>10 perguntas sobre água, solo, energia, resíduos, biodiversidade e tecnologia no campo.</p>
+        <button class="btn btn--primary" id="quizStartBtn">Começar quiz</button>
+      </div>
+
+      <div class="quiz__playing" id="quizPlaying" hidden>
+        <div class="quiz__progress">
+          <div class="quiz__progress-bar"><div class="quiz__progress-fill" id="quizProgressFill"></div></div>
+          <span id="quizProgressText">Pergunta 1 de 10</span>
+        </div>
+        <h3 class="quiz__question" id="quizQuestion"></h3>
+        <div class="quiz__options" id="quizOptions"></div>
+        <p class="quiz__explanation" id="quizExplanation" hidden></p>
+        <button class="btn btn--primary" id="quizNextBtn" hidden>Próxima pergunta</button>
+      </div>
+
+      <div class="quiz__result" id="quizResult" hidden>
+        <p class="quiz__result-score" id="quizResultScore"></p>
+        <p class="quiz__result-msg" id="quizResultMsg"></p>
+        <button class="btn btn--primary" id="quizRestartBtn">Refazer quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FLASHLAB
+============================================ -->
+<section class="section section--tint" id="flashlab">
+  <div class="container">
+    <p class="eyebrow">Estude em ciclos</p>
+    <h2 class="section__title">FlashLab</h2>
+    <p class="section__lead">Flashcards sobre agricultura, sustentabilidade e tecnologia — vire, avalie e revise no seu ritmo.</p>
+
+    <div class="flashlab">
+      <div class="flashlab__toolbar">
+        <span id="flashCounter">Card 1 de 15</span>
+        <div class="flashlab__toolbar-actions">
+          <button class="btn-icon" id="flashShuffle" aria-label="Embaralhar cards"><i class="fa-solid fa-shuffle" aria-hidden="true"></i></button>
+          <button class="btn-icon" id="flashRestart" aria-label="Reiniciar estudo"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i></button>
+        </div>
+      </div>
+
+      <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Cartão de estudo. Pressione Enter para virar.">
+        <div class="flashcard__inner" id="flashcardInner">
+          <div class="flashcard__face flashcard__face--front">
+            <span class="flashcard__hint">Toque para virar</span>
+            <p id="flashFront"></p>
+          </div>
+          <div class="flashcard__face flashcard__face--back">
+            <span class="flashcard__hint">Verso</span>
+            <p id="flashBack"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashlab__nav">
+        <button class="btn btn--ghost" id="flashPrev"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Anterior</button>
+        <div class="flashlab__mark">
+          <button class="btn btn--danger-outline" id="flashReview"><i class="fa-solid fa-rotate" aria-hidden="true"></i> Preciso revisar</button>
+          <button class="btn btn--accent" id="flashLearned"><i class="fa-solid fa-check" aria-hidden="true"></i> Aprendi</button>
+        </div>
+        <button class="btn btn--ghost" id="flashNext">Próximo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+
+      <div class="flashlab__progress">
+        <div class="flashlab__progress-bar"><div class="flashlab__progress-fill" id="flashProgressFill"></div></div>
+      </div>
+
+      <details class="flashlab__challenge">
+        <summary>Modo desafio</summary>
+        <div class="challenge-mode" id="challengeMode">
+          <p id="challengeQuestion">Clique em "Nova pergunta" para começar.</p>
+          <button class="btn btn--primary btn--sm" id="challengeNewBtn">Nova pergunta</button>
+          <button class="btn btn--ghost btn--sm" id="challengeRevealBtn" hidden>Revelar resposta</button>
+          <p class="challenge-mode__answer" id="challengeAnswer" hidden></p>
+          <div class="challenge-mode__grade" id="challengeGrade" hidden>
+            <span>Você acertou?</span>
+            <button class="btn btn--accent btn--sm" id="challengeRight">Sim</button>
+            <button class="btn btn--danger-outline btn--sm" id="challengeWrong">Não</button>
+          </div>
+          <p class="challenge-mode__stats" id="challengeStats"></p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DESAFIO DO DIA
+============================================ -->
+<section class="section" id="desafio-dia">
+  <div class="container">
+    <p class="eyebrow">Desafio do dia</p>
+    <div class="daily-challenge">
+      <h2 id="dailyQuestion">Carregando desafio...</h2>
+      <div class="daily-challenge__options" id="dailyOptions"></div>
+      <p class="daily-challenge__reflection" id="dailyReflection" hidden></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     EVOLUÇÃO / GAMIFICAÇÃO
+============================================ -->
+<section class="section section--tint" id="evolucao">
+  <div class="container">
+    <p class="eyebrow">Seu progresso</p>
+    <h2 class="section__title">Evolução</h2>
+
+    <div class="progress-panel">
+      <div class="progress-panel__level">
+        <span class="progress-panel__level-icon" id="levelIcon">🌱</span>
+        <div>
+          <p class="progress-panel__level-name" id="levelName">Nível 01 — Semente</p>
+          <div class="xp-bar"><div class="xp-bar__fill" id="xpBarFill"></div></div>
+          <p class="progress-panel__xp" id="xpText">0 / 300 XP</p>
+        </div>
+      </div>
+
+      <div class="progress-panel__stats">
+        <div class="progress-stat">
+          <span class="progress-stat__value" id="statAvg">—</span>
+          <span class="progress-stat__label">desempenho médio</span>
+        </div>
+        <div class="progress-stat">
+          <span class="progress-stat__value" id="statCorrect">0</span>
+          <span class="progress-stat__label">acertos</span>
+        </div>
+        <div class="progress-stat">
+          <span class="progress-stat__value" id="statWrong">0</span>
+          <span class="progress-stat__label">erros</span>
+        </div>
+      </div>
+
+      <div class="progress-panel__history">
+        <h3>Sessões</h3>
+        <ul id="sessionHistory" class="session-history"></ul>
+      </div>
+
+      <button class="btn btn--ghost" id="clearHistoryBtn">Limpar meu histórico</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+============================================ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <h2 class="footer__title">O futuro não se planta sozinho.</h2>
+    <p class="footer__text">Conhecimento gera escolhas. Escolhas geram mudanças.</p>
+
+    <nav class="footer__links" aria-label="Links do rodapé">
+      <a href="#projeto">O projeto</a>
+      <a href="#sustentabilidade">Sustentabilidade</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#boas-praticas">Boas práticas</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#flashlab">Flashcards</a>
+      <a href="#monitoramento">Monitoramento</a>
+    </nav>
+
+    <div class="footer__meta">
+      <p><strong>Portal AgroConecta</strong> — projeto escolar desenvolvido para o Agrinho 2026, inspirado no tema "Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente".</p>
+      <p class="footer__note">Espaço reservado para informações oficiais do Agrinho / Sistema FAEP, a serem inseridas posteriormente pela escola.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
